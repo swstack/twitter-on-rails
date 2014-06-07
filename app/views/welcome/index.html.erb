@@ -1,0 +1,5 @@
+<% if current_user %>
+    <%= render :template => 'welcome/main.html.erb' %>
+<% else %>
+    <%= render :template => 'welcome/login.html.erb' %>
+<% end %>
