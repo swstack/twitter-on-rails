@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create", via: :get
   match "/signout" => "sessions#destroy", :as => :signout, via: :get
   get "/mutualfollowers", to: "mutualfollowers#index"
+  get "/mutualfollowers/find", to: "mutualfollowers#find"
   get '/tweets', to: "tweets#index"
 end
