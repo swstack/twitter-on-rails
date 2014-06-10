@@ -1,4 +1,9 @@
 <%= render :template => 'welcome/nav.html.erb' %>
+
+<div id="loading-overlay">
+
+</div>
+
 <div class="container-fluid">
   <h1 class="page-header">
     Mutual Followers
@@ -14,23 +19,41 @@
       <h3 class="page-header">
         <%= @user_screen_name %>
       </h3>
-      <% @user_followers.each do |follower| %>
-          <div class="row">
-            <a href="<%= "https://twitter.com/" + follower[:screen_name] %>"><%= follower[:screen_name] %></a>
-          </div>
-      <% end %>
+
+      <div id="user-followers-body">
+
+      </div>
+
     </div>
     <div class="col-md-2 col-md-offset-1">
       <h3 class="page-header">
         Intersection
       </h3>
+
+      <div id="mutual-followers-body">
+
+      </div>
     </div>
     <div class="col-md-3 col-md-offset-1">
       <h3 class="page-header">
         <input type="text" class="input-sm" id="input-screenname" style="height: 25px;">
         <i class="fa fa-question" rel="tooltip" id="tt-in"></i>
       </h3>
+
+      <div id="target-followers-body">
+
+      </div>
     </div>
 
   </div>
 </div>
+
+<script id="dyn-followers" type="text/x-handlebars-template">
+
+  {{#each followers}}
+  <div class="row">
+    <a href="{{this.profile_url}}">{{this.screen_name}}</a>
+  </div>
+  {{/each}}
+
+</script>
