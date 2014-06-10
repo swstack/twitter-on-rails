@@ -1,4 +1,6 @@
 <%= render :template => 'welcome/nav.html.erb' %>
+<%= javascript_include_tag params[:controller] %>
+<%= stylesheet_link_tag params[:controller] %>
 
 <div id="loading-overlay">
 

@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require bootstrap.min
 //= require handlebars
 //= require spin.min
 //= require jquery.tooltipster.min
+
+var x= 5;
