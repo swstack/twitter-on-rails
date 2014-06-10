@@ -57,7 +57,10 @@ $ rails server
 ```
 
 ## Tests
-TBD
+Run the test suite like so:
+```sh
+$ rake test
+```
 
 ## Heroku Setup
 

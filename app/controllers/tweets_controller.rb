@@ -1,3 +1,4 @@
+
 class TweetsController < ApplicationController
   def index
     if not is_logged_in
@@ -8,7 +9,4 @@ class TweetsController < ApplicationController
     client = get_twitter_client(session['user_token'], session['user_secret'])
     @tweets = client.user_timeline(count=20, screen_name=session['screen_name'])
   end
-
-  private
-
 end
