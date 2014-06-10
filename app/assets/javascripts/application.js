@@ -17,3 +17,4 @@
 //= require bootstrap.min
 //= require handlebars
 //= require spin.min
+//= require jquery.tooltipster.min

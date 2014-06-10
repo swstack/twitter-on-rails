@@ -25,7 +25,10 @@ function findMutualFollowersErrback(err) {
 }
 
 $(document).ready(function () {
-    $('#tt-in').tooltip({title: 'Enter Twitter Screen name'})
+    $('.tooltip').tooltipster({
+        minWidth: 20,
+        minHeight: 20
+    });
 
     $('#btn-find').click(function () {
         target_screenname = $('#input-screenname');
