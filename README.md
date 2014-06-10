@@ -59,18 +59,35 @@ $ rails server
 ## Tests
 TBD
 
-## Deployment
-This application is currently deployed on [Heroku](https://www.heroku.com/).  There are a few things needed to get setup for deploying this application, assuming you are a collaborator on the project.
+## Heroku Setup
 
 First install the Heroku CLI:
 ```sh
 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 ```
 
-
 Setup a new heroku remote in git:
 ```sh
 $ git remote add heroku git@heroku.com:fun-with-twitter.git
+```
+
+Login to heroku:
+```sh
+$ heroku login
+```
+
+Add your public key to the Heroku git server:
+```sh
+$ heroku keys:add
+```
+
+## Deployment
+
+Follow the actions below to deploy a new version of the application to Heroku.
+
+Precompile assets, and commit them to git:
+```sh
+$ rake assets:precompile
 ```
 
 Push whatever code you'd like to deploy:
